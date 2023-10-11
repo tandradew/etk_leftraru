@@ -5,7 +5,7 @@
 
 Execute the script 
 ```
-$ etk_install.sh
+$ ./etk_install.sh
 ```
 
 Compile the code with 8 CPUs (this can take about XXX minutes)
