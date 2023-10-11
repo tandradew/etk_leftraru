@@ -50,3 +50,17 @@ Run the hello-world test with
 ./simfactory/bin/sim create-run helloworld --parfile arrangements/CactusExamples/HelloWorld/par/HelloWorld.par
 ```
 
+You should see an output including
+
+```
+INFO (HelloWorld): Hello World!
+INFO (HelloWorld): Hello World!
+INFO (HelloWorld): Hello World!
+INFO (HelloWorld): Hello World!
+INFO (HelloWorld): Hello World!
+INFO (HelloWorld): Hello World!
+INFO (HelloWorld): Hello World!
+INFO (HelloWorld): Hello World!
+INFO (HelloWorld): Hello World!
+INFO (HelloWorld): Hello World!
+```
