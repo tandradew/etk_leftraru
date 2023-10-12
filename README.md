@@ -12,6 +12,12 @@ scp <username>@leftraru2.nlhpc.cl
 The hostname used by ETK is picked up from the way you connect, so here we force it 
 to be `leftraru2`. -- TO DO: make compilation independent of this
 
+
+##  Clone this repository
+```
+git clone https://github.com/tandradew/etk_leftraru.git
+```
+
 ## Load modules
 
 Install some dependencies on top of the ones loaded by default in leftraru.
