@@ -18,6 +18,11 @@ cp ../leftraru_config/einsteintoolkit.th thornlists/
 
 echo "editing .ini file"
 sed -i 's/generic.cfg/leftraru.cfg/g' simfactory/mdb/machines/leftraru2.nlhpc.cl.ini
+sed -i '/submit  /c\submit          = sbatch @SCRIPTFILE@; sleep 3; echo "using sbatch" ' simfactory/mdb/machines/leftraru2.nlhpc.cl.ini
+sed -i '/getstatus	/c\getstatus	= squeue -j  @JOB_ID@' simfactory/mdb/machines/leftraru2.nlhpc.cl.ini
+sed -i '/stop  /c\stop            = scancel @JOB_ID@' simfactory/mdb/machines/leftraru2.nlhpc.cl.ini
+
+
 #cp ../leftraru_config/leftraru2.nlhpc.cl.ini simfactory/mdb/machines/
 
 echo "copying .cfg file"
