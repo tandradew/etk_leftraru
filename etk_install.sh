@@ -28,5 +28,11 @@ sed -i '/stop  /c\stop            = scancel @JOB_ID@' simfactory/mdb/machines/le
 echo "copying .cfg file"
 cp ../leftraru_config/leftraru.cfg simfactory/mdb/optionlists/
 
+echo "copying .run file"
+cp ../leftraru_config/leftraru.run simfactory/mdb/runscripts/
+
+echo "copying .sub file"
+cp ../leftraru_config/leftraru.sub simfactory/mdb/submitscripts/
+
 # unset MPI
 # unset MPI_DIR
