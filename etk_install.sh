@@ -14,10 +14,13 @@ cd Cactus/
 echo "copying thornlist"
 cp ../leftraru_config/einsteintoolkit.th thornlists/
 
-# copy config files
 
+# edit ini file
 echo "editing .ini file"
 sed -i 's/generic.cfg/leftraru.cfg/g' simfactory/mdb/machines/leftraru2.nlhpc.cl.ini
+sed -i 's/generic.sub/leftraru.sub/g' simfactory/mdb/machines/leftraru2.nlhpc.cl.ini
+sed -i 's/generic.run/leftraru.run/g' simfactory/mdb/machines/leftraru2.nlhpc.cl.ini
+
 sed -i '/submit  /c\submit          = sbatch @SCRIPTFILE@; sleep 3; echo "using sbatch" ' simfactory/mdb/machines/leftraru2.nlhpc.cl.ini
 sed -i '/getstatus	/c\getstatus	= squeue -j  @JOB_ID@' simfactory/mdb/machines/leftraru2.nlhpc.cl.ini
 sed -i '/stop  /c\stop            = scancel @JOB_ID@' simfactory/mdb/machines/leftraru2.nlhpc.cl.ini
@@ -25,6 +28,7 @@ sed -i '/stop  /c\stop            = scancel @JOB_ID@' simfactory/mdb/machines/le
 
 #cp ../leftraru_config/leftraru2.nlhpc.cl.ini simfactory/mdb/machines/
 
+# copy config files
 echo "copying .cfg file"
 cp ../leftraru_config/leftraru.cfg simfactory/mdb/optionlists/
 
