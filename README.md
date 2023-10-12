@@ -90,4 +90,4 @@ Run the quasi-circular binary evolution with
 ./simfactory/bin/sim submit qc0-mclachlan --parfile=par/qc0-mclachlan.par --procs=20 --ppn=20 --ppn-used=20 --num-threads=1 --walltime=00:10:00
 ```
 
-This is an unexpensive example of a black hole binary. 
+This is an unexpensive example of a black hole binary, which will run for 10 minutes using 20 CPUs. 
