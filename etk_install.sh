@@ -39,7 +39,5 @@ cp ../leftraru_config/leftraru.sub simfactory/mdb/submitscripts/
 echo "copying test parameter files"
 cp ../test_parfiles/qc0-mclachlan.par par/
 
-# TODO fix example par files remove `Formaline`
-
 # unset MPI
 # unset MPI_DIR
