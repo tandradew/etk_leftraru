@@ -36,6 +36,9 @@ cp ../leftraru_config/leftraru.run simfactory/mdb/runscripts/
 echo "copying .sub file"
 cp ../leftraru_config/leftraru.sub simfactory/mdb/submitscripts/
 
+echo "copying parfiles file"
+cp ../test_parfiles/qc0-mclachlan.par par/
+
 # TODO fix example par files remove `Formaline`
 
 # unset MPI
