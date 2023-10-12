@@ -16,8 +16,9 @@ cp ../leftraru_config/einsteintoolkit.th thornlists/
 
 # copy config files
 
-echo "copying .ini file"
-cp ../leftraru_config/leftraru2.nlhpc.cl.ini simfactory/mdb/machines/ 
+echo "editing .ini file"
+sed -i 's/generic.cfg/leftraru.cfg/g' simfactory/mdb/machines/leftraru2.nlhpc.cl.ini
+#cp ../leftraru_config/leftraru2.nlhpc.cl.ini simfactory/mdb/machines/
 
 echo "copying .cfg file"
 cp ../leftraru_config/leftraru.cfg simfactory/mdb/optionlists/
