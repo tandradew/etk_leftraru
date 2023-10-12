@@ -1,0 +1,15 @@
+#!/bin/sh
+#SBATCH --partition=debug
+#SBATCH --time=@WALLTIME@
+#SBATCH -N @NODES@ -n @NUM_PROCS@
+#SBATCH --ntasks-per-node=@NODE_PROCS@
+#SBATCH --cpus-per-task=@NUM_THREADS@
+
+#SBATCH @("@CHAINED_JOB_ID@" != "" ? "-d afterok:@CHAINED_JOB_ID@" : "")@
+#SBATCH --job-name=@SHORT_SIMULATION_NAME@
+#SBATCH --mail-type=ALL
+#SBATCH --output=@RUNDIR@/@SIMULATION_NAME@.out
+#SBATCH --error=@RUNDIR@/@SIMULATION_NAME@.err
+
+cd @SOURCEDIR@
+@SIMFACTORY@ run @SIMULATION_NAME@ --basedir=@BASEDIR@  --machine=@MACHINE@ --restart-id=@RESTART_ID@ @FROM_RESTART_COMMAND@

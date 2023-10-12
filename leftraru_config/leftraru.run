@@ -1,0 +1,54 @@
+#!/bin/sh
+
+echo "Preparing:"
+set -x                          # Output commands
+set -e                          # Abort on errors
+
+cd @RUNDIR@-active
+
+echo "Checking:"
+pwd
+hostname
+date
+
+echo "Usinf leftraru.run"
+echo "Environment:"
+export CACTUS_NUM_PROCS=@NUM_PROCS@
+export CACTUS_NUM_THREADS=@NUM_THREADS@
+export GMON_OUT_PREFIX=gmon.out
+export OMP_NUM_THREADS=@NUM_THREADS@
+env | sort > SIMFACTORY/ENVIRONMENT
+
+echo " Requested ressources ########################### "
+echo " Requested NODES:             @NODES@ "
+echo " Requested CORES per NODE:    @PPN@ "
+echo " Requested CORES:             @PROCS_REQUESTED@ "
+echo " Requested MPI processes:     @NUM_PROCS@ "
+echo " Requested THREADS:           @PROCS@ "
+echo " Allocation per node ############################ "
+echo " MPI processes per node:      @NODE_PROCS@ "
+echo " Threads per MPI process:     @NUM_THREADS@ "
+echo " CORES per NODE:              @PPN_USED@ "
+echo " Threads per core:            @NUM_SMT@ "
+
+echo "Starting:"
+export CACTUS_STARTTIME=$(date +%s)
+
+if [ ${CACTUS_NUM_PROCS} = 1 ]; then
+    if [ @RUNDEBUG@ -eq 0 ]; then
+          @EXECUTABLE@ -L 3 @PARFILE@
+    else
+          gdb --args @EXECUTABLE@ -L 3 @PARFILE@
+    fi
+else
+    	mpirun -np @NUM_PROCS@ @EXECUTABLE@ -L 3 @PARFILE@
+fi
+
+echo @EXECUTABLE@
+#time srun -n @NUM_PROCS@ @EXECUTABLE@ -L 3 @PARFILE@
+
+# srun @EXECUTABLE@ -L 3 @PARFILE@
+
+echo "Stopping:"
+date
+echo "Done."
