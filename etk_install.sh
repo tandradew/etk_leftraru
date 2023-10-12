@@ -24,9 +24,7 @@ sed -i 's/generic.run/leftraru.run/g' simfactory/mdb/machines/leftraru2.nlhpc.cl
 sed -i '/submit  /c\submit          = sbatch @SCRIPTFILE@; sleep 3; echo "using sbatch" ' simfactory/mdb/machines/leftraru2.nlhpc.cl.ini
 sed -i '/getstatus	/c\getstatus	= squeue -j  @JOB_ID@' simfactory/mdb/machines/leftraru2.nlhpc.cl.ini
 sed -i '/stop  /c\stop            = scancel @JOB_ID@' simfactory/mdb/machines/leftraru2.nlhpc.cl.ini
-
-
-#cp ../leftraru_config/leftraru2.nlhpc.cl.ini simfactory/mdb/machines/
+sed -i '/nodes  /c\nodes           = 8' simfactory/mdb/machines/leftraru2.nlhpc.cl.ini  
 
 # copy config files
 echo "copying .cfg file"
@@ -37,6 +35,8 @@ cp ../leftraru_config/leftraru.run simfactory/mdb/runscripts/
 
 echo "copying .sub file"
 cp ../leftraru_config/leftraru.sub simfactory/mdb/submitscripts/
+
+# TODO fix example par files remove `Formaline`
 
 # unset MPI
 # unset MPI_DIR
