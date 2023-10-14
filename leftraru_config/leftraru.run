@@ -41,13 +41,11 @@ if [ ${CACTUS_NUM_PROCS} = 1 ]; then
           gdb --args @EXECUTABLE@ -L 3 @PARFILE@
     fi
 else
-    	mpirun -np @NUM_PROCS@ @EXECUTABLE@ -L 3 @PARFILE@
+      time srun -n @NUM_PROCS@ @EXECUTABLE@ -L 3 @PARFILE@
 fi
 
 echo @EXECUTABLE@
-#time srun -n @NUM_PROCS@ @EXECUTABLE@ -L 3 @PARFILE@
-
-# srun @EXECUTABLE@ -L 3 @PARFILE@
+# mpirun -np @NUM_PROCS@ @EXECUTABLE@ -L 3 @PARFILE@
 
 echo "Stopping:"
 date
