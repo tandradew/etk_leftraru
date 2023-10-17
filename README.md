@@ -47,6 +47,7 @@ Currently Loaded Modules:
 ## Download and configure
 Execute the script 
 ```
+$ cd etk_leftraru/
 $ ./etk_install.sh
 ```
 
