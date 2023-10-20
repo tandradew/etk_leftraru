@@ -83,6 +83,16 @@ INFO (HelloWorld): Hello World!
 INFO (HelloWorld): Hello World!
 ```
 
+### TOV star
+
+Run the TOV star example with binary evolution with 
+
+```
+./simfactory/bin/sim submit tov_ET --parfile=par/tov_ET.par --procs=2 --ppn=2 --ppn-used=2 --num-threads=1 --walltime=00:30:00
+```
+
+Note that adding too many CPUs will result in an error (grid structure inconsistent). 
+
 ### Quasi-circular binary
 
 Run the quasi-circular binary evolution with 

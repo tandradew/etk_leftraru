@@ -38,6 +38,4 @@ cp ../leftraru_config/leftraru.sub simfactory/mdb/submitscripts/
 
 echo "copying test parameter files"
 cp ../test_parfiles/qc0-mclachlan.par par/
-
-# unset MPI
-# unset MPI_DIR
+cp ../test_parfiles/tov_ET.par par/
