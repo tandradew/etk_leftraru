@@ -39,3 +39,4 @@ cp ../leftraru_config/leftraru.sub simfactory/mdb/submitscripts/
 echo "copying test parameter files"
 cp ../test_parfiles/qc0-mclachlan.par par/
 cp ../test_parfiles/tov_ET.par par/
+cp ../test_parfiles/BBHMedRes.par par/
