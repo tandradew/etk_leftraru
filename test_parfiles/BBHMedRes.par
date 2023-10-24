@@ -14,7 +14,7 @@ TerminationTrigger::max_walltime = 12.0
 TerminationTrigger::on_remaining_walltime        = 30 # minutes
 TerminationTrigger::output_remtime_every_minutes = 60
 Cactus::terminate                               = time
-Cactus::cctk_final_time                         = 200 
+Cactus::cctk_final_time                         = 300 
 
 #------------------------------------------------------------------------------
 # Activate all necessary thorns:
@@ -600,7 +600,7 @@ WeylScal4::fd_order = "4th"
 IOHDF5::checkpoint                  = "yes"
 IO::checkpoint_ID                   = "yes"
 IO::recover                         = "autoprobe"
-IO::checkpoint_every_walltime_hours = 6.0
+IO::checkpoint_every_walltime_hours = 12.0
 # IO::out_proc_every                = 2
 IO::checkpoint_keep                 = 3
 IO::checkpoint_on_terminate         = "yes"
