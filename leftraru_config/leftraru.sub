@@ -1,9 +1,10 @@
 #!/bin/sh
-#SBATCH --partition=debug
+#SBATCH --partition=slims
 #SBATCH --time=@WALLTIME@
 #SBATCH -N @NODES@ -n @NUM_PROCS@
 #SBATCH --ntasks-per-node=@NODE_PROCS@
 #SBATCH --cpus-per-task=@NUM_THREADS@
+#SBATCH --mem-per-cpu=2300
 
 #SBATCH @("@CHAINED_JOB_ID@" != "" ? "-d afterok:@CHAINED_JOB_ID@" : "")@
 #SBATCH --job-name=@SHORT_SIMULATION_NAME@
