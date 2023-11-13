@@ -33,11 +33,16 @@ $ conda install numpy scipy matplotlib jupyter nb_conda_kernels
 $ hostname
 leftraru<X>
 ```
+\<X\> = 1,2,3,4
 
 ```
 $ jupyter-notebook --no-browser --port 23<nn>
 ```
 
+Open new terminal in local machine
+```
+$ ssh -NL 23<nn>:localhost:23<nn> -l student<nn> leftraru<X>.nlhpc.cl
+```
 
 ## ETK Tests
 
