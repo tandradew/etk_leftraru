@@ -26,13 +26,18 @@ Useful links at NLHPC [conda](https://wiki.nlhpc.cl/Uso_de_conda), [jupyter](htt
 $ conda create -n my_env
 $ conda activate my_env
 $ conda install numpy scipy matplotlib jupyter nb_conda_kernels
-
 ```
 
 ## jupyter connection 
 ```
+$ hostname
+leftraru<X>
+```
 
 ```
+$ jupyter-notebook --no-browser --port 23<nn>
+```
+
 
 ## ETK Tests
 
