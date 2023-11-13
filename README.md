@@ -15,6 +15,24 @@ $ ssh student<nn>@leftraru.nlhpc.cl
 $ git pull
 ```
 
+## Python
+
+Useful links at NLHPC [conda](https://wiki.nlhpc.cl/Uso_de_conda), [jupyter](https://wiki.nlhpc.cl/Jupyter_bajo_Conda)
+
+
+### Create environment
+
+```
+$ conda create -n my_env
+$ conda activate my_env
+$ conda install numpy scipy matplotlib jupyter nb_conda_kernels
+
+```
+
+## jupyter connection 
+```
+
+```
 
 ## ETK Tests
 
