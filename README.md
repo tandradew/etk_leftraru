@@ -60,6 +60,8 @@ $ ssh -NL 23<nn>:localhost:23<nn> -l student<nn> leftraru<x>.nlhpc.cl
 ```
 with \<nn\> from student number, and \<x\> from hostname number
 
+Open the URL in your favorite browser, and that's it! You should see the jupyter navigator
+
 ## ETK Tests
 
 ### Hello world
