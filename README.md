@@ -12,6 +12,7 @@ $ ssh student<nn>@leftraru.nlhpc.cl
 ## update repo 
 
 ```
+$ cd etk_leftraru
 $ git pull
 ```
 
