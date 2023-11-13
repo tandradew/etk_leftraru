@@ -16,6 +16,19 @@ $ cd etk_leftraru
 $ git pull
 ```
 
+If you get this error message due to conflict with changes, i.e.
+
+```
+error: Your local changes to the following files would be overwritten by merge:
+```
+
+do a hard reset to the origin branch by 
+
+```
+$ git fetch --all
+$ git reset --hard origin/main
+```
+
 ## Python
 
 Useful links at NLHPC [conda](https://wiki.nlhpc.cl/Uso_de_conda), [jupyter](https://wiki.nlhpc.cl/Jupyter_bajo_Conda)
@@ -32,18 +45,20 @@ $ conda install numpy scipy matplotlib jupyter nb_conda_kernels
 ## jupyter connection 
 ```
 $ hostname
-leftraru<X>
+leftraru<x>
 ```
-\<X\> = 1,2,3,4
+\<x\> = 1,2,3,4
 
 ```
 $ jupyter-notebook --no-browser --port 23<nn>
 ```
+Make note of hostname number and URLs
 
 Open new terminal in local machine
 ```
-$ ssh -NL 23<nn>:localhost:23<nn> -l student<nn> leftraru<X>.nlhpc.cl
+$ ssh -NL 23<nn>:localhost:23<nn> -l student<nn> leftraru<x>.nlhpc.cl
 ```
+with \<nn\> from student number, and \<x\> from hostname number
 
 ## ETK Tests
 
