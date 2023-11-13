@@ -1,13 +1,13 @@
 # etk_leftraru
 
 
-# Instructions to install EinsteinToolkit
-
-## ssh to leftraru
+## connect to cluster
 
 ```
-scp <username>@leftraru2.nlhpc.cl
+ssh student<nn>@leftraru.nlhpc.cl
 ```
+
+<nn>: 21-25; 32 - 67
 
 The hostname used by ETK is picked up from the way you connect, so here we force it 
 to be `leftraru2`. -- TO DO: make compilation independent of this
