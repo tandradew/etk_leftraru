@@ -114,3 +114,25 @@ Run another quasi-circular binary evolution with
 ```
 
 This is a more expensive example of a black hole binary, which takes about 20 hours using 40 CPUs to complete. 
+
+## Simfactory commands
+
+Create and submit new simulation
+```
+./simfactory/bin/sim submit <simulation_name> --parfile=<parfile> [...info about resources]
+```
+
+Show all simulations
+```
+./simfactory/bin/sim list-simulations
+```
+
+Stop simulation 
+```
+./simfactory/bin/sim stop <simulation_name>
+```
+
+Resume simulation
+```
+./simfactory/bin/sim submit <existing_simulation_name>
+```
